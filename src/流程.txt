@@ -1,0 +1,17 @@
+1 从前端页面书写
+	布局+ CSS
+	表单
+		JS做验证
+		JSDOM操作为主
+2 向后台发起了请求
+	由我们的servlet容器去监听。
+	然后由这个容器去负责分发这个请求应该有哪个Servlet来处理（MVC模式，）
+	MVC：Model  View Controller 
+	Servlet  Controller （根据urlPattern）
+	具体的业务应该交由业务层  Service，处理相关的业务，参数的处理 。
+	dao层，为Service服务，BaseDao，不用写太多东西。
+	M  --  后面写的 entity .vo  domain bean  实体类（作一个模型）
+	最后  V view  视图层，  HTML来承担（JSP HTML写java代码 ）
+	工作实践
+	Servlet "<div>" + "</div>" servlet应该专注于逻辑控制。不应该用来处理视图功能
+	JSP来负责视图。
